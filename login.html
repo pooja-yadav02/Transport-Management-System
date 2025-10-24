@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Transport Management</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- LEFT SIDE -->
+    <div class="info-section">
+      <h2>Welcome to Transport Management System</h2>
+      <p>
+        The Transport Management System simplifies daily transport operations 
+        for colleges and organizations. It manages bus routes, driver details, 
+        vehicle tracking, student allocation, and scheduling in one unified platform.
+      </p>
+      <p>
+        The goal is to ensure safety, punctuality, and transparency while 
+        optimizing transport efficiency. Manage your trips and records securely — 
+        all from one place.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="login-box">
+      <img src="iCampus_Logo.png" alt="iCampus Logo" class="logo">
+
+      <select id="college" class="input-field">
+        <option value="">Select College</option>
+        <option>United College of Engineering</option>
+        <option>United Medicity</option>
+      </select>
+
+      <input type="text" id="studentId" class="input-field" placeholder="BUS ID No.">
+      <input type="password" id="password" class="input-field" placeholder="Password">
+
+      <div class="captcha-container">
+        <canvas id="captchaCanvas" width="120" height="40"></canvas>
+        <!-- ensure button does not act like a form submit -->
+        <button id="refreshCaptcha" type="button" title="Refresh Captcha">⟳</button>
+      </div>
+
+      <input type="text" id="captchaInput" class="input-field" placeholder="Enter Above Code">
+
+      <!-- ensure sign-in is type="button" so JS handles validation and redirect -->
+      <button class="btn-signin" type="button">Sign In</button>
+      <button class="btn-secondary" type="button"> Forgot Password</button>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
